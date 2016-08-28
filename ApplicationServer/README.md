@@ -1,17 +1,22 @@
-# tallerII
+# ApplicationServer
 
-Para instalar leveldb seguí los siguientes pasos:
+Para correr el programa:
 
+```
+/tallerII/ApplicationServer$  cmake code/
+/tallerII/ApplicationServer$  make
+/tallerII/ApplicationServer$  ./AppServer
+```
+
+Para instalar leveldb:
+
+```
 sudo apt-get install libsnappy-dev
 git clone https://github.com/google/leveldb.git
 cd leveldb
 make
-cd out-shared
-sudo mv libleveldb.* /usr/local/lib
-cd ..
-cd include
-sudo cp -R leveldb /usr/local/include
-cd ..
-cd out-static
-sudo mv libleveldb.* /usr/local/lib
+sudo mv out-shared/libleveldb.* /usr/local/lib
+sudo mv out-static/libleveldb.* /usr/local/lib
+sudo cp -R include/leveldb /usr/local/include
+```
 
