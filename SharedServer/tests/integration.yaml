@@ -1,0 +1,8 @@
+---
+- config:
+    - testset: "Quickstart app tests"
+
+- test:
+    - group: "Quickstart"
+    - name: "Basic smoketest"
+    - url: "/api/job_positions/"

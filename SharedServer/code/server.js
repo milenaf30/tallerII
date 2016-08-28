@@ -21,40 +21,11 @@ app.use(bodyParser.urlencoded({'extended':'true'}));            // parse applica
 app.use(bodyParser.json());                                     // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 
-
-
-
-
 var router = express.Router();
 var urls = require("./urls.js");
 urls.set_urls(router);
 app.use('/', router);
 
-/*
-app.get('/api/example', function(req, res) {
-
-    // use mongoose to get all todos in the database
-    Todo.find(function(err, todos) {
-
-        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-        if (err)
-            res.send(err)
-
-        res.json(todos); // return all todos in JSON format
-    });
-
-    //createJobPostion(req, res);
-
-    res.json("HELLO WORD!");
-});
-
-
-// application -------------------------------------------------------------
-app.get('*', function(req, res) {
-    res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
-});
-
-*/
 
 // listen (start app with node server.js) ====================================== 
 app.listen(80);
