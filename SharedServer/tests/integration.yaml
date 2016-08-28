@@ -2,7 +2,14 @@
 - config:
     - testset: "Quickstart app tests"
 
+# - test:
+#     - group: "Quickstart"
+#     - name: "Basic smoketest"
+#     - url: "/api/job_positions/"
+
 - test:
     - group: "Quickstart"
-    - name: "Basic smoketest"
-    - url: "/api/job_positions/"
+    - name: "Crear una categoría"
+    - url: "/job_positions/categories/software"
+    - method: "POST"
+    #- body: '{"first_name": "Gaius","id": 10,"last_name": "Baltar","login": "baltarg"}'
