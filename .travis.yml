@@ -14,4 +14,5 @@ before_install:
 - sudo docker build -t sharedservertest SharedServer/tests/
 
 script:
-- sudo docker run -it sharedservertest bash
+- curl localhost
+#- sudo docker run -it sharedservertest bash
