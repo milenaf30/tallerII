@@ -17,7 +17,7 @@ before_install:
 script:
 - sudo docker ps -a
 - sudo docker exec -it sharedserver_sharedserver_1 ps -A
-
-- sudo docker exec -it sharedserver_sharedserver_1 curl localhost
+- sudo docker exec -it sharedserver_sharedserver_1 nodemon -L server.js
+#- sudo docker exec -it sharedserver_sharedserver_1 curl localhost
 # - curl 127.0.0.1
 #- sudo docker run -it sharedservertest bash
