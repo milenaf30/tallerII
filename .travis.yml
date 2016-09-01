@@ -1,0 +1,12 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+- sudo docker-compose -f SharedServer/docker-compose.yml build
+- sudo docker-compose -f SharedServer/docker-compose.yml up -d 
+- docker build -t sharedservertest tests/
+
+script:
+- docker run -it sharedservertest bash
