@@ -1,0 +1,13 @@
+language: cpp
+
+compiler:
+- gcc
+
+os:
+- linux
+
+branches:
+
+  only:
+  - master
+  - ApplicationServer
