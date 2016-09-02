@@ -7,3 +7,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp mongoose/mongoose.h mongoose/mongoose.c)
 add_executable(AppServer ${SOURCE_FILES})
+
+install(TARGETS AppServer DESTINATION appserver)
+set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "David Doria")
+include(CPack)

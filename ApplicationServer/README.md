@@ -8,6 +8,19 @@ Para correr el programa:
 /tallerII/ApplicationServer$  ./AppServer
 ```
 
+Para generar un paquete .deb:
+
+```
+/tallerII/ApplicationServer$  cmake code/
+/tallerII/ApplicationServer$  make package
+```
+
+Para instalar el paquete (que resultara en el ejecutable ubicado en /usr/appserver):
+
+```
+/tallerII/ApplicationServer$  sudo dpkg -i ApplicationServer-0.1.1-Linux.deb
+```
+
 Para instalar leveldb:
 
 ```
