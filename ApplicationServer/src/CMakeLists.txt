@@ -1,3 +1,6 @@
-cmake_minimum_required (VERSION 2.8)
-project (ApplicationServer)
-add_executable(ApplicationServer main.cpp)
+message (STATUS "Building source code")
+
+set(target ApplicationServer_src)
+set(sources main.cpp)
+
+add_executable(${target} ${sources})
