@@ -16,10 +16,10 @@ before_install:
 script:
 - sudo docker-compose -f SharedServer/docker-compose.yml up -d 
 - sudo docker ps -a
+- sudo docker exec -it sharedserver_sharedserver_1 node code/server.js
 - sudo docker exec -it sharedserver_sharedserver_1 ps -A
-- sudo docker exec -it sharedserver_sharedserver_1 node server.js
 
-- sudo docker exec -it sharedserver_sharedserver_1 nodemon -L server.js
+#- sudo docker exec -it sharedserver_sharedserver_1 nodemon -L server.js
 
 #- sudo docker exec -it sharedserver_sharedserver_1 curl localhost
 #- sudo docker exec -it sharedserver_sharedserver_1 curl localhost
