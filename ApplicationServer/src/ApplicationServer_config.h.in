@@ -1,0 +1,2 @@
+#define ApplicationServer_VERSION_MAJOR @ApplicationServer_VERSION_MAJOR@
+#define ApplicationServer_VERSION_MINOR @ApplicationServer_VERSION_MINOR@

@@ -1,14 +1,15 @@
 cmake_minimum_required(VERSION 2.8)
 project(ApplicationServer)
 
-include_directories(mongoose)
+set (ApplicationServer_VERSION_MAJOR 1)
+set (ApplicationServer_VERSION_MINOR 0)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+# configure a header file to pass some of the CMake settings
+# to the source code
+configure_file (
+  "${PROJECT_SOURCE_DIR}/ApplicationServer_config.h.in"
+  "${PROJECT_BINARY_DIR}/ApplicationServer_config.h"
+  )
 
-set(SOURCE_FILES main.cpp mongoose/mongoose.h mongoose/mongoose.c)
-add_executable(AppServer ${SOURCE_FILES})
-
-install(TARGETS AppServer DESTINATION appserver)
-set(CPACK_GENERATOR "DEB")
-set(CPACK_DEBIAN_PACKAGE_MAINTAINER "David Doria")
-include(CPack)
+add_executable(ApplicationServer main.cpp)
+target_link_libraries(ApplicationServer Mongoose)
