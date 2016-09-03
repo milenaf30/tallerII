@@ -12,10 +12,6 @@ branches:
   - master
   - ApplicationServer
 
-before_script:
-  - mkdir build
-  - cd build
-
 script:
-  - c++ ApplicationServer/code/main.cpp -o main
-  - ./main
+  - cmake ApplicationServer/code 
+  - make
